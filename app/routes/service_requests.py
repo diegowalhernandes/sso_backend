@@ -6,7 +6,7 @@ from app.core.security import get_current_user
 from app.schemas import ServiceRequest, ServiceRequestCreate
 from app.services.service_requests import create_service_request, get_service_requests, update_request_status
 
-router = APIRouter(prefix="/requests", tags=["service_requests"])
+router = APIRouter(prefix="/service_requests", tags=["service_requests"])
 
 @router.post("/", response_model=ServiceRequest)
 async def create_request(
